@@ -1,0 +1,12 @@
+services:
+  web:
+    build:
+      context: ./
+      args:
+        - ARG_ONE=$MY_VAR
+    container_name: action_test
+    ports:
+      - "8000:5000"
+
+  redis:
+    image: "redis:alpine"
